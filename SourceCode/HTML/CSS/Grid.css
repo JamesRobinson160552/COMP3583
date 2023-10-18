@@ -1,0 +1,85 @@
+.grid-center{
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'subheader subheader subheader subheader search searchButton'
+    'paragraph paragraph paragraph paragraph browse browse'
+    'paragraph paragraph paragraph paragraph business business'
+    'blank blank blank blank blank blank'
+    'map map map map map map'
+    'map map map map map map'
+    'map map map map map map'
+    'map map map map map map'
+    'map map map map map map';
+  gap: 10px;
+  padding: 100px;
+  grid-template-columns: repeat(6, 1fr); /* Equal width columns */
+  grid-template-rows: repeat(9, 1fr); /* Equal height rows */
+  }
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  border: none;
+}
+
+.item1 {
+  grid-area: subheader;
+  font-size: 30px;
+}
+
+.item2{
+  grid-area: paragraph;
+  font-size: 20px;
+}
+
+.item3 {
+  font-size: 30px;
+  grid-area: search;
+  background-color: #f1f1f1;
+  border-radius: 36px;
+  border-color: #ddd;
+}
+
+.item4 {
+  font-size: 30px;
+  grid-area: browse;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.item5 {
+  font-size: 30px;
+  grid-area: business;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.item6 {
+  font-size: 30px;
+  grid-area: map;
+  background-color: #f1f1f1;
+}
+
+.item7{
+  grid-area: blank;
+}
+
+.item8{
+  font-size: 30px;
+  grid-area: searchButton;
+  background-color: #f1f1f1;
+}
+
+.button {
+  border-radius: 36px;
+  border-color: #ddd;
+}
+
+.button:hover{
+  background-color: #ddd;
+    color: black;
+}

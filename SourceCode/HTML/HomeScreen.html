@@ -2,16 +2,41 @@
 <html>
 <head>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="CSS/HomePage.css">
+    <link rel="stylesheet" href="CSS/Grid.css">
     <title>BHB-Home</title>
 </head>
 <body>
 
-<h1>HomePage</h1>
-<div>
-    <a href="SearchResultsScreen.html">To Search Results</a>
-    <a href="BusinessOwnerVerifyScreen.html">To Business Owner Verify</a>
-    <a href="UserProfileScreen.html">To User Profile</a>
-    <a href="LoginScreen.html">Log Out</a>
+<div class="header">
+  <div class="header-center">
+      <a class="active" href="HomeScreen.html">Home</a>
+      <!--<a href="SearchResultsScreen.html">To Search Results</a> -->
+      <a href="BusinessOwnerVerifyScreen.html">To Business Owner Verify</a>
+      <a href="UserProfileScreen.html">To User Profile</a>
+      <a href="LoginScreen.html">Log Out</a>
+  </div>
+</div>
+
+<h1 style = "text-align:center">Business Hours Buddy</h1>
+
+<div class="grid-center">
+  <div class="grid-container">
+    <div class="item1">Welcome to Buddy Base Hours</div>
+    <div class="item2">
+      We here at BHB hope to provide you with an accurate report of local business hours in your area. To search for a specific business, enter the name
+      into the search bar then press Search. If your are looking for businesses in your area press Browse. If any inaccuracies are found please let us
+      know so that we may update their Accuracy Rating.
+    </div>
+    <input class="item3" type="text" name="search"></input>
+    <button class="item8 button" type="submit">Search</button>  
+    <button class="item4 button" type="submit">Browse</button>  
+    <button class="item5 button" type="submit">Validate Business</button>  
+    <div class="item6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3870.1373147062895!2d-64.36835334073848!3d45.09007515976487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1697656705099!5m2!1sen!2sca" width="90%" height="100%" style="border:10;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="item7"></div>
+  </div>
 </div>
 
 <div id="app">{{ message }}</div>
