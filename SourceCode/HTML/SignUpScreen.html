@@ -3,12 +3,29 @@
 <head>
     <title>BHB-SignUp</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="CSS/HomePage.css">
+    <link rel="stylesheet" href="CSS/SignUpPage.css">
 </head>
 <body>
+<div class="header">
+    <div class="header-center">
+        <p class="divBody">Business Hour Buddy</p>
+    </div>
+</div>
 
-<h1>SignUp</h1>
-<div>
-    <a href="LoginScreen.html">To Login Page</a>
+<div class="divContainer">
+    <div class="divBody">
+        <p class="label">Username</p>
+        <input type="text" name="username"></input>
+        <p class="label">Password</p>
+        <input type="text" name="password"></input>
+        <p class="label">Email</p>
+        <input type="text" name="email"></input>
+        <p class="label">Organization Name (if applicable)</p>
+        <input type="text" name="organizationName"></input>
+        <button class="button" type="submit">Submit</button> 
+        <a href="LoginScreen.html">To Login Page</a>
+    </div>
 </div>
 
 </body>
