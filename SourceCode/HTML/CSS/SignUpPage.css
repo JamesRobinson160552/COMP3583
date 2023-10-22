@@ -19,7 +19,6 @@ label{
     padding: 10px;
     justify-content: center;
     align-items: center;
-    display: inline-block;
 }
 
 .divBody{
@@ -32,11 +31,29 @@ label{
     line-height: 25px;
     border-radius: 4px;
     background-color: #f1f1f1;
-    display: inline-block;
+    display: block;
+}
+
+
+.divBodySub{
+    margin: 0 auto;
+    color: black;
+    text-align: left;
+    padding: 15px;
+    font-size: 30px;
+    line-height: 25px;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    display: block;
+}
+
+.image{
+    display: block;
+    margin: 0 auto;
 }
 
 .button {
-    width: 150px; 
+    width: auto; 
     height: 50px; 
     border-radius: 36px;
     border-color: #ddd;
@@ -46,6 +63,6 @@ label{
 .button:hover{
     background-color: #ddd;
     color: black;
-    width: 150px; 
+    width: auto;
     height: 50px; 
 }

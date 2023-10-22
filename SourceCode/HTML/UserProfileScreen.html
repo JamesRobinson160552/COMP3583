@@ -3,7 +3,7 @@
 <head>
     <title>BHB-UserSettings</title>
     <link rel="stylesheet" href="CSS/HomePage.css">
-    <link rel="stylesheet" href="CSS/Grid.css">
+    <link rel="stylesheet" href="CSS/SignUpPage.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
@@ -11,25 +11,36 @@
 <div class="header">
     <div class="header-center">
         <a href="HomeScreen.html">Home</a>
-        <!--<a href="SearchResultsScreen.html">To Search Results</a> -->
         <a href="BusinessOwnerVerifyScreen.html">Business Verification</a>
         <a class="active" href="UserProfileScreen.html">User Profile</a>
         <a href="LoginScreen.html">Log Out</a>
     </div>
 </div>
 
-<div class="grid-center">
-    <div class="grid-container-user-profile">
-        <div class="subheader">John Doe</div>
-        <div class="paragraph">
-            Bio??
-        </div>
-        </div>
-        <img src="CSS/profilepic.jpg" class="profile-picture"></img>
+<div class="divContainer">
+    <div class="divBodySub">
+        <img src="CSS/profilepic.jpg" class="image" width="100" height="100"></img>
+        <button class="button" type="submit">Change Profile Picture</button> 
     </div>
 </div>
 
-<h1>UserSettings</h1>
+<div class="divContainer">
+    <div class="divBody">
+        <p class="label">First Name</p>
+        <input type="text" name="firstName" placeholder="John"></input>
+        <p class="label">Last Name</p>
+        <input type="text" name="lastName" placeholder="Doe"></input>
+        <p class="label">Username</p>
+        <input type="text" name="username"></input>
+        <p class="label">Password</p>
+        <input type="text" name="firstName"></input>
+        <p class="label">Email</p>
+        <input type="text" name="email"></input>
+        <p class="label">Organization Name (if applicable)</p>
+        <input type="text" name="organizationName"></input>
+        <button class="button" type="submit">Save Changes</button> 
+    </div>
+</div>
 
 </body>
 </html>
