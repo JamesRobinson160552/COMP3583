@@ -1,15 +1,18 @@
 <template>
     <div class="header">
         <div class="header-center">
-            <router-link to="/">Home</router-link>
-            <router-link to="/login">Login</router-link>
-            <router-link to="/signup">Signup</router-link>
-            <router-link to="/profile">Profile</router-link>
+            <a><router-link to="/">Home</router-link></a>
+            <a><router-link to="/login">Login</router-link></a>
+            <a><router-link to="/signup">Signup</router-link></a>
+            <a><router-link to="/profile">Profile</router-link></a>
         </div>
     </div>
-    <h1>Results for {{ term }}</h1>
-    <div v-for="business in businesses" class="search-result" v-bind:key="business.id">
-        <h1> {{ business.name }} </h1>
+    <div class="search-result">
+        <h3> {{ result.name }} </h3>
+        <img v-bind:src="result.image_url">
+        <p> {{ result.opentime }} - {{ result.closetime }} </p>
+        <p>Reliability Rating: {{ result.rating }}</p>
+        <router-link :to="`/businessdetails/${result.id}`">Details</router-link>
     </div>
 </template>
 
@@ -20,7 +23,8 @@ export default {
     name: 'SearchResults',
     data() {
         return {
-            businesses
+            term: this.$route.params.term,
+            result: businesses.find(business => business.name == this.$route.params.term)
         }
     }
 };
