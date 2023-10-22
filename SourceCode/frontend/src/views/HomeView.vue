@@ -19,7 +19,7 @@
                 know so that we may update their Accuracy Rating.
                 </div>
                 <input class="search" type="text" v-model="searchInput" name="search" id="search" />
-                <router-link :to="searchResultsRoute" class="search-button button" type="submit">Search</router-link>
+                <button class="search-button button"><router-link :to="searchResultsRoute">Search</router-link></button>
                 <button class="browse button" type="submit">Browse</button>  
             <button class="business button" type="submit">Validate Business</button>  
             <div class="map">
