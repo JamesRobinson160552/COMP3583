@@ -7,9 +7,12 @@
             <router-link to="/profile">Profile</router-link>
         </div>
     </div>
-    <h1>Results for {{ term }}</h1>
-    <div v-for="business in businesses" class="search-result" v-bind:key="business.id">
-        <h1> {{ business.name }} </h1>
+    <div class="search-result">
+        <h3> {{ result.name }} </h3>
+        <img v-bind:src="result.image_url">
+        <p> {{ result.opentime }} - {{ result.closetime }} </p>
+        <p>Reliability Rating: {{ result.rating }}</p>
+        <router-link :to="`/businessdetails/${result.id}`">Details</router-link>
     </div>
 </template>
 
@@ -20,7 +23,8 @@ export default {
     name: 'SearchResults',
     data() {
         return {
-            businesses
+            term: this.$route.params.term,
+            result: businesses.find(business => business.name == this.$route.params.term)
         }
     }
 };
