@@ -8,7 +8,7 @@
         </div>
     </div>
     <h1>Business Details for {{ business.name }}</h1>
-    <img v-bind:src="business.image_url">
+    <img v-bind:src="business.imagepath">
     <p> {{ business.opentime }} - {{ business.closetime }} </p>
     <p>Reliability Rating: {{ business.rating }}</p>
 

@@ -9,7 +9,7 @@
     </div>
     <div class="search-result">
         <h3> {{ result.name }} </h3>
-        <img v-bind:src="result.image_url">
+        <img v-bind:src="result.imagepath">
         <p> {{ result.opentime }} - {{ result.closetime }} </p>
         <p>Reliability Rating: {{ result.rating }}</p>
         <router-link :to="`/businessdetails/${result.id}`">Details</router-link>
