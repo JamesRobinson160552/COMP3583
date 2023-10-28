@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="searchresults">
-        <h1>Results for "{{ term }}"</h1>
+        <h1 v-if="{ term }.length > 1">Results for "{{ term }}"</h1>
         <div v-for="result in searchresults" v-bind:key="result.id" :class="{ reliable: result.rating >= 4, okay: result.rating >= 3 && result.rating < 4, unreliable: result.rating < 3 }">
             <div class="search-result">
                 <h3> {{ result.name }} </h3>
