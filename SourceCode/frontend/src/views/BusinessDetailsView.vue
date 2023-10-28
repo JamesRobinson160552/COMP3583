@@ -11,6 +11,7 @@
     <img v-bind:src="business.imagepath">
     <p> {{ business.opentime }} - {{ business.closetime }} </p>
     <p>Reliability Rating: {{ business.rating }}</p>
+    <p> {{ business.description }} </p>
 
 </template>
 
