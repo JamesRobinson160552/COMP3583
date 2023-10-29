@@ -1,12 +1,4 @@
 <template>
-    <div class="header">
-        <div class="header-center">
-            <a><router-link to="/">Home</router-link></a>
-            <a><router-link to="/login">Login</router-link></a>
-            <a><router-link to="/signup" class="active">Signup</router-link></a>
-            <a><router-link to="/profile">Profile</router-link></a>
-        </div>
-    </div>
     <div class="divContainer">
     <div class="divBody">
         <p class="label">Username</p>

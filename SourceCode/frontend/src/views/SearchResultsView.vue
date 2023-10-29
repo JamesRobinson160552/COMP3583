@@ -1,12 +1,4 @@
 <template>
-    <div class="header">
-        <div class="header-center">
-            <a><router-link to="/">Home</router-link></a>
-            <a><router-link to="/login">Login</router-link></a>
-            <a><router-link to="/signup">Signup</router-link></a>
-            <a><router-link to="/profile">Profile</router-link></a>
-        </div>
-    </div>
     <div class="searchresults">
         <h1 v-if="{ term }.length > 1">Results for "{{ term }}"</h1>
         <div v-for="result in searchresults" v-bind:key="result.id" class="search-result">

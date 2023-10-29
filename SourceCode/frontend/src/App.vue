@@ -1,5 +1,10 @@
 <template>
-
+  <div class="header">
+        <div class="header-center">
+            <router-link to="/"><img class="icon icon-home" src="./assets/homeicon.png"></router-link>
+            <router-link to="/profile"><img class="icon icon-profile" src="./assets/profilepic.jpg"></router-link>
+        </div>
+    </div>
   <router-view/>
 </template>
 
@@ -176,4 +181,13 @@ nav a.router-link-exact-active {
   background-color: #ddd;
   color: black;
 }
+
+/*****************************************Icons */
+.icon{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+}
+
 </style>

@@ -1,17 +1,13 @@
 <template>
-    <div class="header">
-        <div class="header-center">
-            <a><router-link to="/">Home</router-link></a>
-            <a><router-link to="/login">Login</router-link></a>
-            <a><router-link to="/signup">Signup</router-link></a>
-            <a><router-link to="/profile">Profile</router-link></a>
+    <div class="contents">
+        <h1 class="business-name">{{ business.name }}</h1>
+        <img class="business-image" v-bind:src="business.imagepath">
+        <p class="business-hours"> {{ business.opentime }} - {{ business.closetime }} </p>
+        <p class="business-rating" :class="{ highreliability: business.rating >= 4, mediumreliability: business.rating >= 3 && business.rating < 4, lowreliability: business.rating < 3 }">Reliability Rating: {{ business.rating }}</p>
+        <div class="description-container">
+            <p class="business-description"> {{ business.description }} </p>
         </div>
     </div>
-    <h1>Business Details for {{ business.name }}</h1>
-    <img v-bind:src="business.imagepath">
-    <p> {{ business.opentime }} - {{ business.closetime }} </p>
-    <p>Reliability Rating: {{ business.rating }}</p>
-    <p> {{ business.description }} </p>
 
 </template>
 
@@ -28,4 +24,77 @@ export default {
 </script>
 
 <style scoped>
+.contents {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.business-name {
+    text-align: center;
+    font-size: 4vw;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.3); /* Text shadow for contrast */
+    letter-spacing: 0.2vw; /* Spacing between letters */
+}
+
+.business-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1vw; /* Rounded corners */
+    box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.description-container {
+    border: 1px solid black;
+    border-radius: 1vw; /* Rounded corners */
+    box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%; 
+}
+
+.business-description {
+    text-align: center;
+    font-size: 1.8vw;
+    margin-top: 1%;
+    text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.2); /* Text shadow for contrast */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+.business-rating {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #ff9900; /* Orange color */
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.3); /* Text shadow for contrast */
+}
+
+.business-hours {
+    text-align: center;
+    font-size: 1.8vw;
+    color: #666; /* Gray color */
+    margin-bottom: 1%;
+    text-transform: uppercase;
+}
+
+.highreliability {
+    color: green;
+}
+
+.mediumreliability {
+    color: orange;
+}
+
+.lowreliability {
+    color: red;
+}
 </style>
