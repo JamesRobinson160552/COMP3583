@@ -18,7 +18,6 @@
         <p class="label">Organization Name (if applicable)</p>
         <input type="text" name="organizationName">
         <button class="button" type="submit">Submit</button> 
-        <a href="LoginScreen.html">To Login Page</a>
     </div>
 </div>
 </template>

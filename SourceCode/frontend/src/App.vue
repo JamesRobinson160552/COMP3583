@@ -176,4 +176,74 @@ nav a.router-link-exact-active {
   background-color: #ddd;
   color: black;
 }
+
+/*************************************************************** SignUpPage */
+input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 36px;
+}
+
+label{
+  display: block; 
+  margin-bottom: 3px; 
+}
+
+.divContainer{
+  margin: 0 35%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.divBody{
+  float: none;
+  margin: 0 auto;
+  color: black;
+  text-align: left;
+  padding: 15px;
+  font-size: 30px;
+  line-height: 25px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  display: block;
+}
+
+
+.divBodySub{
+  margin: 0 auto;
+  color: black;
+  text-align: left;
+  padding: 15px;
+  font-size: 30px;
+  line-height: 25px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  display: block;
+}
+
+.image{
+    display: block;
+    margin: 0 auto;
+}
+
+.sign-up-button {
+  width: auto; 
+  height: 50px; 
+  border-radius: 36px;
+  border-color: #ddd;
+  font-size: 30px;
+}
+
+.sign-up-button:hover{
+  background-color: #ddd;
+  color: black;
+  width: auto;
+  height: 50px; 
+}
 </style>
