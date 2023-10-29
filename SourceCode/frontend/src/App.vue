@@ -25,14 +25,12 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 /************************************************************** Header */
-/* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
     background-color: #f1f1f1;
     padding: 20px 10px;
   }
   
-  /* Style the header links */
   .header a {
     float: left;
     color: black;
@@ -44,32 +42,29 @@ nav a.router-link-exact-active {
     border-radius: 4px;
   }
   
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
   .header a.logo {
     font-size: 25px;
     font-weight: bold;
   }
   
-  /* Change the background color on mouse-over */
   .header a:hover {
     background-color: #ddd;
     color: black;
   }
-  
-  /* Style the active/current link*/
+ 
   .header a.active {
     background-color: black;
     color: white;
   }
   
-  /* Float the link section to the right */
+
   .header-right {
     float: right;
   }
 
   .header-center{
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
+    display: flex; 
+    justify-content: center; 
   }
 
 /*************************************************************** Grid */
@@ -91,8 +86,8 @@ nav a.router-link-exact-active {
     'map map map map map map';
   gap: 10px;
   padding: 100px;
-  grid-template-columns: repeat(6, 1fr); /* Equal width columns */
-  grid-template-rows: repeat(9, 1fr); /* Equal height rows */
+  grid-template-columns: repeat(6, 1fr); 
+  grid-template-rows: repeat(9, 1fr); 
 }
 
 .grid-container-user-profile {
@@ -103,8 +98,8 @@ nav a.router-link-exact-active {
     'paragraph paragraph paragraph paragraph profilePicture profilePicture';
   gap: 10px;
   padding: 100px;
-  grid-template-columns: repeat(6, 1fr); /* Equal width columns */
-  grid-template-rows: repeat(3, 1fr); /* Equal height rows */
+  grid-template-columns: repeat(6, 1fr); 
+  grid-template-rows: repeat(3, 1fr); 
 }
 
 .grid-container > div {
