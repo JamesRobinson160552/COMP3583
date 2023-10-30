@@ -3,11 +3,44 @@
 <head>
     <title>BHB-BusinessVerification</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="CSS/HomePage.css">
+    <link rel="stylesheet" href="CSS/BusinessOwnerVerifyScreen.css">
 </head>
 <body>
+<div class ="header">
+    <div class="header-center">
+        <p class="divBody">Business Hours Buddy Owner Verification</p>
+    </div>
+</div>
+<div class="divContainer">
+    <div clas="divBody">
+        <p>As a part of our commitment to ensuring only the most accurate business hours are published<br>
+            we offer Business Owners like you to publish your own verified hours! To join our growing <br>
+            roster of verified businesses, please fill out the form below so we can get in touch and <br>
+            verify you and your business! Once verified we will convert you current account to a verified<br>
+            account! If you haven't already, head on over the <a href="SignUpScreen.html">Sign Up</a> to get started! <br>
+        </p>
 
-<h1>Business Verification</h1>
-<a href="HomeScreen.html">To Home Page</a>
-
+        <form>
+            <label for="bName">Business Name:</label><br>
+            <input type="text" id="bName" name="bName" required><br>
+            <label for="fName">First Name:</label><br>
+            <input type="text" id="fName" name="fName" required><br>
+            <label for="lName">Last Name:</label><br>
+            <input type="text" id="lName" name="lName" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" 
+            placeholder="johndoe@business.com" required><br>
+            <label for="phoneNum">Phone Number:</label><br>
+            <input type="tel" id="phoneNum" name="phoneNum" 
+            placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+            <label for="addInfo">Additional Info:</label><br>
+            <input type="text" id="addInfo" name="addInfo"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <a href="HomeScreen.html">To Home Page</a>
+    </div>
+</div>
 </body>
 </html>
