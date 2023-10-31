@@ -36,6 +36,15 @@
 </template>
 
 <script>
+
+export default {
+    name: 'BusinessOwnerView',
+    data () {
+        return {
+            
+        }
+    }
+}
 </script>
 
 <style scoped>

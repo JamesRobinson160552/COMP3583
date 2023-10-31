@@ -4,6 +4,9 @@
         <img class="business-image" v-bind:src="business.imagepath">
         <p class="business-hours"> {{ business.opentime }} - {{ business.closetime }} </p>
         <p class="business-rating" :class="{ highreliability: business.rating >= 4, mediumreliability: business.rating >= 3 && business.rating < 4, lowreliability: business.rating < 3 }">Reliability Rating: {{ business.rating }}</p>
+        <div class="business-rating-buttons">
+            <button v-on:click="Dislike"><image class='icon' src="../assets/thumbsdown.png"/></button>    <button v-on:click="Like"><image class='icon' src="../assets/thumbsup.png"/></button>
+        </div>
         <div class="description-container">
             <p class="business-description"> {{ business.description }} </p>
         </div>
@@ -19,8 +22,27 @@ export default {
         return {
             business: businesses.find(business => business.id == this.$route.params.id)
         }
+    },
+
+    methods: {
+        Like: function() {
+            if (Math.floor(Math.random()*10) >= 7) //This is random for demonstration purposes
+            {
+                this.business.rating+=0.1;
+            }
+            alert('Thank you for your feedback!');
+        },
+
+        Dislike: function() {
+            if (Math.floor(Math.random()*10) >= 7)
+            {
+                this.business.rating-=0.1;
+            }
+            alert('Thank you for your feedback!');
+        },
     }
 }
+
 </script>
 
 <style scoped>
@@ -96,5 +118,13 @@ export default {
 
 .lowreliability {
     color: red;
+}
+
+.review-button {
+    font-size: 1.8vw;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.3);
 }
 </style>

@@ -16,7 +16,7 @@ const routes = [
     component: BusinessDetailsView
   },
   {
-    path: '/businessowner/:id',
+    path: '/businessowner',
     name: 'BusinessOwner',
     component: BusinessOwnerView
   },
@@ -49,7 +49,7 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     component: UserProfileView
-  }
+  },
 ]
 
 const router = createRouter({
