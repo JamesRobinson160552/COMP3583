@@ -30,7 +30,7 @@
             <input type="text" id="addInfo" name="addInfo"><br><br>
             <input type="submit" value="Submit">
         </form>
-        <a href="HomeScreen.html">To Home Page</a>
+        <button><router-link to="/">Home</router-link></button>
     </div>
 </div>
 </template>
@@ -44,7 +44,7 @@ export default {
             
         }
     }
-}
+};
 </script>
 
 <style scoped>
@@ -87,14 +87,6 @@ label{
 .image{
     display: block;
     margin: 0 auto;
-}
-
-.button {
-    width: auto; 
-    height: 50px; 
-    border-radius: 36px;
-    border-color: #ddd;
-    font-size: 30px;
 }
 
 .button:hover{

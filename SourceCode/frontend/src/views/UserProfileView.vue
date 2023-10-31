@@ -1,3 +1,5 @@
+<!--This page is currently mostly empty and unreachable-->
+
 <template>
     <div class="grid-center">
         <div class="grid-container-user-profile">

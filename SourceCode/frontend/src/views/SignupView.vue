@@ -9,6 +9,8 @@
             <input type="text" name="email">
             <p class="label">Organization Name (if applicable)</p>
             <input type="text" name="organizationName">
+            <br>
+            <br>
             <button class="button" type="submit"><router-link to="/">Submit</router-link></button> 
         </div>
     </div>
@@ -35,7 +37,7 @@ label{
 }
 
 .divContainer{
-    margin: 0 35%;
+    margin: 0 5%;
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -53,9 +55,13 @@ label{
     border-radius: 4px;
     background-color: #f1f1f1;
     display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 36px;
+    box-sizing: border-box;
 }
 
 .button {
+    transform: translate(100%, 20%);
     width: 150px; 
     height: 50px; 
     border-radius: 36px;

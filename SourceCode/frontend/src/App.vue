@@ -35,6 +35,9 @@ nav a.router-link-exact-active {
     overflow: hidden;
     background-color: #f1f1f1;
     padding: 20px 10px;
+    border-bottom: #2c3e50 1px solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
   }
   
   /* Style the header links */
@@ -188,6 +191,11 @@ nav a.router-link-exact-active {
   height: 50px;
   padding: 10px;
   margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #2c3e50;
 }
 
 </style>
