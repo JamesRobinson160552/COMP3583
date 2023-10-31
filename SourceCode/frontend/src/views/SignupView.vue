@@ -1,17 +1,17 @@
 <template>
     <div class="divContainer">
-    <div class="divBody">
-        <p class="label">Username</p>
-        <input type="text" name="username">
-        <p class="label">Password</p>
-        <input type="text" name="password">
-        <p class="label">Email</p>
-        <input type="text" name="email">
-        <p class="label">Organization Name (if applicable)</p>
-        <input type="text" name="organizationName">
-        <button class="button" type="submit">Submit</button> 
+        <div class="divBody">
+            <p class="label">Username</p>
+            <input type="text" name="username">
+            <p class="label">Password</p>
+            <input type="text" name="password">
+            <p class="label">Email</p>
+            <input type="text" name="email">
+            <p class="label">Organization Name (if applicable)</p>
+            <input type="text" name="organizationName">
+            <button class="button" type="submit"><router-link to="/">Submit</router-link></button> 
+        </div>
     </div>
-</div>
 </template>
 
 <script>

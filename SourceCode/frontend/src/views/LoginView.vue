@@ -1,36 +1,52 @@
 <template>
+    <br>
+    <br>
     <div class="login-container">
-      <h1>Login</h1>
-      <form @submit.prevent="login">
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" v-model="username" required>
+        <h1>Login</h1>
+        <form @submit.prevent="login">
+            <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" v-model="username" required>
+            </div>
+            <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" v-model="password" required>
+            </div>
+            <button type="submit" v-on:click="login">Login</button>
+        </form>
+        <div>
+            <br>
+            <br>
+            <button class = "signupbutton"><router-link to="/signup">Sign up</router-link></button>
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" v-model="password" required>
         </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
   </template>
   
   <script>
+  import { users } from '../fakeusers.js';
+
   export default {
-    data() {
-      return {
-        username: '',
-        password: ''
-      };
-    },
     methods: {
       login() {
-        // Perform login logic here
-        console.log('Username:', this.username);
-        console.log('Password:', this.password);
+        const user = login();
+        alert("Logged in as " + user);
+        if (user !== '') {
+          this.$router.push({ path: '/' });
+        }
       }
-    }
+    },
   };
+
+  function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    if (users.filter(user => user.username === username && user.password === password)) {
+      return username;
+    }
+    else {
+      return '';
+    }
+  }
   </script>
 
 <style scoped>
