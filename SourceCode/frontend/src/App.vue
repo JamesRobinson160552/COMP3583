@@ -1,8 +1,8 @@
 <template>
   <div class="header">
         <div class="header-center">
-            <router-link to="/"><img class="icon icon-home" src="./assets/homeicon.png"></router-link>
-            <router-link to="/login"><img class="icon icon-profile" src="./assets/profilepic.jpg"></router-link>
+            <router-link class= "home" to="/"><img class="icon icon-home" src="./assets/homeicon.png"></router-link>
+            <router-link class= "profile" to="/login"><img class="icon icon-profile" src="./assets/profilepic.jpg"></router-link>
         </div>
     </div>
   <router-view/>

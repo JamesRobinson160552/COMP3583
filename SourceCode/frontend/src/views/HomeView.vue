@@ -6,8 +6,8 @@
             <div class="subheader">Welcome to Business Hours Buddy</div>
                 <div class="paragraph">
                   We here at BHB hope to provide you with an accurate report of local business hours in your area. To search for a specific business, enter the name
-                  into the search bar then press Search. If your are looking for businesses in your area press Browse. If any inaccuracies are found please let us
-                  know so that we may update their Accuracy Rating.
+                  into the search bar then press Search. If you are looking for businesses in your area press Browse. Use the like and dislike buttons to give feedback
+                  on how accurate the hours are.
                 </div>
                 <input class="search" type="text" v-model="searchInput" name="search" id="search" />
                 <button class="search-button button"><router-link :to="searchResultsRoute">Search</router-link></button>
@@ -38,5 +38,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
