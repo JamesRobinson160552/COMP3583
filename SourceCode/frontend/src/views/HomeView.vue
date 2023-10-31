@@ -3,7 +3,7 @@
 
     <div class="grid-center">
         <div class="grid-container-home">
-            <div class="subheader">Welcome to Buddy Base Hours</div>
+            <div class="subheader">Welcome to Business Hours Buddy</div>
                 <div class="paragraph">
                   We here at BHB hope to provide you with an accurate report of local business hours in your area. To search for a specific business, enter the name
                   into the search bar then press Search. If your are looking for businesses in your area press Browse. If any inaccuracies are found please let us
