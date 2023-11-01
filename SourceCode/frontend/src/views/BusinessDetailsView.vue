@@ -6,11 +6,11 @@
 <template>
     <div class="contents">
         <h1 class="business-name">{{ business.name }}</h1>
-        <h4 class="business-hours"> Open today from {{ business.opentime }} - {{ business.closetime }} </h4>
-        <img class="business-image" :src=GetPhoto(business.imagepath)>
+        <img class="business-image" v-bind:src="business.imagepath">
+        <p class="business-hours"> {{ business.opentime }} - {{ business.closetime }} </p>
         <p class="business-rating" :class="{ highreliability: business.rating >= 4, mediumreliability: business.rating >= 3 && business.rating < 4, lowreliability: business.rating < 3 }">Reliability Rating: {{ business.rating }}</p>
         <div class="business-rating-buttons">
-            <button v-on:click="Dislike"><img class='dislike' src="../assets/thumbsdown.png"></button>    <button v-on:click="Like"><img class='like' src="../assets/thumbsup.png"></button>
+            <button v-on:click="Dislike"><image class='icon' src="../assets/thumbsdown.png"></image></button>    <button v-on:click="Like"><image class='icon' src="../assets/thumbsup.png"></image></button>
         </div>
         <div class="description-container">
             <p class="business-description"> {{ business.description }} </p>
@@ -45,10 +45,6 @@ export default {
             }
             alert('Thank you for your feedback!');
         },
-
-        GetPhoto: function(path) {
-            return require('@/assets/' + path)
-        }
     }
 }
 
@@ -75,8 +71,8 @@ export default {
 }
 
 .business-image {
-    width: 50%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 1vw; /* Rounded corners */
     box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.1); /* Subtle box shadow */
     object-fit: cover; /* Ensure the image covers the container */
@@ -117,14 +113,6 @@ export default {
     text-transform: uppercase;
 }
 
-.business-image {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 1vw; /* Rounded corners */
-    box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-    object-fit: cover; /* Ensure the image covers the container */
-}
-
 .highreliability {
     color: green;
 }
@@ -143,15 +131,5 @@ export default {
     margin-top: 2%;
     margin-bottom: 2%;
     text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.3);
-}
-
-.dislike {
-    width: 6vw;
-    height: 6vw;
-}
-
-.like {
-    width: 6vw;
-    height: 6vw;
 }
 </style>
