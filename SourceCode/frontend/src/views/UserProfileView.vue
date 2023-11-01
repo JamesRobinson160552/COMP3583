@@ -7,7 +7,7 @@
             <div class="paragraph">
                 Bio??
             </div>
-            <img src="/assets/profilepic.jpg" class="profile-picture">
+            <img src="../assets/profilepic.jpg" class="profile-picture">
         </div>
     </div>
 
