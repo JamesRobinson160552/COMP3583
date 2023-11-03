@@ -10,7 +10,7 @@
         <p class="business-hours"> {{ business.opentime }} - {{ business.closetime }} </p>
         <p class="business-rating" :class="{ highreliability: business.rating >= 4, mediumreliability: business.rating >= 3 && business.rating < 4, lowreliability: business.rating < 3 }">Reliability Rating: {{ business.rating }}</p>
         <div class="business-rating-buttons">
-            <button v-on:click="Dislike"><image class='icon' src="../assets/thumbsdown.png"></image></button>    <button v-on:click="Like"><image class='icon' src="../assets/thumbsup.png"></image></button>
+            <button v-on:click="Dislike"><image class='icon' src="/assets/thumbsdown.png"></image></button>    <button v-on:click="Like"><image class='icon' src="/assets/thumbsup.png"></image></button>
         </div>
         <div class="description-container">
             <p class="business-description"> {{ business.description }} </p>
