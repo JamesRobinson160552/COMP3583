@@ -99,6 +99,9 @@ export default {
                 closureDur.hide();
             }
         }
+    },
+    mounted() {
+        document.title = 'Business Hours Buddy - Report'; // Set the title when the component is mounted
     }
 };
 

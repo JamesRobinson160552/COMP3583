@@ -34,6 +34,9 @@ export default {
       return `/searchresults/${this.searchInput}`;
     },
   },
+  mounted() {
+        document.title = 'Business Hours Buddy'; // Set the title when the component is mounted
+    }
 };
 </script>
 

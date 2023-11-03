@@ -35,6 +35,9 @@
         }
       }
     },
+    mounted() {
+        document.title = 'Business Hours Buddy - Login'; // Set the title when the component is mounted
+    }
   };
 
   function login() {

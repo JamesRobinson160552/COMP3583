@@ -24,6 +24,9 @@ export default {
             searchresults: search(this.$route.params.term.toLowerCase())
         };
     },
+    mounted() {
+        document.title = 'Business Hours Buddy - Search Results'; // Set the title when the component is mounted
+    }
 };
 
 function search(term = '') {

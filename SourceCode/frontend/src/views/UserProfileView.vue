@@ -30,6 +30,11 @@
 </template>
 
 <script>
+export default {
+  mounted() {
+    document.title = 'Business Hours Buddy - User Profile'; // Set the title when the component is mounted
+  }
+};
 </script>
 
 <style scoped>

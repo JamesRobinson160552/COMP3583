@@ -42,6 +42,9 @@ export default {
         return {
             
         }
+    },
+    mounted() {
+        document.title = 'Business Hours Buddy - Owner Verification'; // Set the title when the component is mounted
     }
 };
 </script>

@@ -23,6 +23,9 @@ export default {
         return {
             
         }
+    },
+    mounted() {
+        document.title = 'Business Hours Buddy - Sign Up'; // Set the title when the component is mounted
     }
 };
 </script>
