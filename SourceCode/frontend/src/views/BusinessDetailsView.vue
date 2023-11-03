@@ -12,10 +12,11 @@
             :class="{ highreliability: business.rating >= 4, mediumreliability: business.rating >= 3 && business.rating < 4, lowreliability: business.rating < 3 }">
             Reliability Rating: {{ business.rating }}</p>
         <div class="business-rating-buttons">
-            <button v-on:click="Dislike">
-                <image class='icon' src="/assets/thumbsdown.png"></image>
-            </button> <button v-on:click="Like">
-                <image class='icon' src="/assets/thumbsup.png"></image>
+            <button @click="dislike">
+                <img class="icon" src="/assets/thumbsdown.png" alt="Dislike">
+            </button>
+            <button @click="like">
+                <img class="icon" src="/assets/thumbsup.png" alt="Like">
             </button>
         </div>
         <div class="description-container">
@@ -30,7 +31,7 @@
 
 import { businesses } from '../fakedata'
 export default {
-    
+
     name: 'BusinessDetails',
     data() {
         return {
@@ -39,7 +40,7 @@ export default {
     },
 
     methods: {
-        Like: function () {
+        like() {
             if (Math.floor(Math.random() * 10) >= 7) //This is random for demonstration purposes
             {
                 this.business.rating += 0.1;
@@ -47,7 +48,7 @@ export default {
             alert('Thank you for your feedback!');
         },
 
-        Dislike: function () {
+        dislike() {
             if (Math.floor(Math.random() * 10) >= 7) {
                 this.business.rating -= 0.1;
             }
@@ -176,4 +177,5 @@ export default {
 
 .button:hover {
     background-color: #0e5811;
-}</style>
+}
+</style>
