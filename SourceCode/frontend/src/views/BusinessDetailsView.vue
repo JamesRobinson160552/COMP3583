@@ -6,7 +6,7 @@
 <template>
     <div class="contents">
         <h1 class="business-name">{{ business.name }}</h1>
-        <img class="business-image" v-bind:src="business.imagepath">
+        <img class="business-image" v-bind:src="business.imagepath" width="200">
         <p class="business-hours"> {{ business.opentime }} - {{ business.closetime }} </p>
         <p class="business-rating" :class="{ highreliability: business.rating >= 4, mediumreliability: business.rating >= 3 && business.rating < 4, lowreliability: business.rating < 3 }">Reliability Rating: {{ business.rating }}</p>
         <div class="business-rating-buttons">
