@@ -16,8 +16,10 @@
             <p class="business-hours">{{business.opentime}} - {{business.closetime}}</p><br>
             <p class="business-location">{{business.location}}</p>
         </div>
-        <br>
-        <br>
+    </div>
+    <br>
+    <br>
+    <div class="divBody">
         <form name="inaccuracyReport">
             <h3>Reason for Reporting:</h3><br>
             <input type="checkbox" id="reason1" name="reason1" value="Wrong Open Time" v-on:clock="CorrectTime">
@@ -28,7 +30,12 @@
             <label for="Inaccuracy3">Incorrect Address</label><br>
             <input type="checkbox" id="reason4" name="reason4" value="Business is Closed" v-on:click="closureDur">
             <label for="Inaccuracy4">Business is Closed</label><br>
-
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="divBody">
+        <form name="inaccuracyReport">
             <h3>Correct Info (if known):</h3><br>
             <label for="CorrectionOpen">Corrected Open Time:</label>
             <input type="time" id="correcttime" name="correcttime" value="Correct Open Time"><br>
@@ -46,8 +53,12 @@
             <label for="InaccuracyR">Additional Info</label><br>
             <input type="text" id="reasoninfo" name="reasoninfo" value="Additional Info"><br>
             <br>
-            <input class="button" type="submit" value="Submit" name="submit1">
         </form>
+    </div>
+    <br>
+    <br>
+    <div class="divBody">
+        <input class="button" type="submit" value="Submit" name="submit1">
     </div>
 </div>
 </template>
