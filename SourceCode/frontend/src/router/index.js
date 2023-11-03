@@ -31,7 +31,7 @@ const routes = [
     component: LoginView
   },
   {
-    path: '/report',
+    path: '/report-Data/:term',
     name: 'Report',
     component: ReportView
   },
@@ -41,7 +41,7 @@ const routes = [
     component: SearchResultsView
   },
   {
-    path: '/signup',
+    path: '/sign-up',
     name: 'SignUp',
     component: SignUpView
   },

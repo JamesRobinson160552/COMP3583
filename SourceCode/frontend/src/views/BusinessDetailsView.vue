@@ -15,6 +15,7 @@
         <div class="description-container">
             <p class="business-description"> {{ business.description }} </p>
         </div>
+        <button class = "button report"><router-link :to="reportResultsRoute">Report</router-link></button>
     </div>
 
 </template>
@@ -45,7 +46,13 @@ export default {
             }
             alert('Thank you for your feedback!');
         },
-    }
+    },
+    computed: {
+    reportResultsRoute() {
+        const name= this.business.name;
+        return `/report-Data/${ name }`;
+    },
+    },
 }
 
 </script>
@@ -131,5 +138,21 @@ export default {
     margin-top: 2%;
     margin-bottom: 2%;
     text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 60px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #0e5811;
 }
 </style>

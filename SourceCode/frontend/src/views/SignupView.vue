@@ -17,6 +17,14 @@
 </template>
 
 <script>
+export default {
+    name: '/sign-up',
+    data () {
+        return {
+            
+        }
+    }
+};
 </script>
 
 <style scoped>
@@ -65,13 +73,17 @@ label{
     width: 150px; 
     height: 50px; 
     border-radius: 36px;
-    border-color: #ddd;
     font-size: 30px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .button:hover{
-    background-color: #ddd;
-    color: black;
+    background-color: #0e5811;
     width: 150px; 
     height: 50px; 
 }

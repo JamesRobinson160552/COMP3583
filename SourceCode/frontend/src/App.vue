@@ -3,6 +3,7 @@
         <div class="header-center">
             <router-link to="/"><img class="icon icon-home" src="/assets/homeicon.png"></router-link>
             <router-link to="/login"><img class="icon icon-profile" src="/assets/profilepic.jpg"></router-link>
+            <router-link to="/profile"><img class="icon icon-profile" src="/assets/profilepic.jpg"></router-link>
         </div>
     </div>
   <router-view/>
@@ -30,7 +31,6 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 /************************************************************** Header */
-/* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
     background-color: #f1f1f1;
@@ -39,8 +39,6 @@ nav a.router-link-exact-active {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
   }
-  
-  /* Style the header links */
   .header a {
     float: left;
     color: black;
@@ -52,32 +50,28 @@ nav a.router-link-exact-active {
     border-radius: 4px;
   }
   
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
   .header a.logo {
     font-size: 25px;
     font-weight: bold;
   }
   
-  /* Change the background color on mouse-over */
   .header a:hover {
     background-color: #ddd;
     color: black;
   }
   
-  /* Style the active/current link*/
   .header a.active {
     background-color: black;
     color: white;
   }
   
-  /* Float the link section to the right */
   .header-right {
     float: right;
   }
 
   .header-center{
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
+    display: flex;
+    justify-content: center;
   }
 
 /*************************************************************** Grid */

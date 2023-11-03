@@ -11,9 +11,11 @@
 
 <div class="divContainer">
     <div class="divBody">
-        <h1 class="business-name">{{business.name}}</h1><br>
-        <p class="business-hours">{{business.opentime}} - {{business.closetime}}</p><br>
-        <p class="business-location">{{business.location}}</p>
+        <div v-for="business in searchresults" v-bind:key="business.id" class="search-result">
+            <h1 class="business-name">{{business.name}}</h1><br>
+            <p class="business-hours">{{business.opentime}} - {{business.closetime}}</p><br>
+            <p class="business-location">{{business.location}}</p>
+        </div>
         <br>
         <br>
         <form name="inaccuracyReport">
@@ -44,7 +46,7 @@
             <label for="InaccuracyR">Additional Info</label><br>
             <input type="text" id="reasoninfo" name="reasoninfo" value="Additional Info"><br>
             <br>
-            <input type="submit" value="Submit" name="submit1">
+            <input class="button" type="submit" value="Submit" name="submit1">
         </form>
     </div>
 </div>
@@ -54,11 +56,12 @@
 import { businesses } from '../fakedata'
     
 export default {
-    name: 'Report',
+    name: 'report-Data',
     data() {
-        return {
-            business: businesses.find(business => business.id == this.$route.params.id)
-        }
+        return{
+            term: this.$route.params.term.toLowerCase(),
+            searchresults: search(this.$route.params.term.toLowerCase())
+        };
     },
 
     methods:{
@@ -70,7 +73,7 @@ export default {
             if(openChecked.checked){
                 correctTime.show();
             }
-            else if (closedChecked.checked) {
+            else if (closeChecked.checked) {
                 correctTime.show();
             } else {
                 correctTime.hide();
@@ -83,7 +86,7 @@ export default {
             if(addChecked.checked){
                 correctAddress.show();
             } else {
-                CorrectAddress.hide();
+                correctAddress.hide();
             }
         },
         ClosureDuration: function(){
@@ -97,6 +100,10 @@ export default {
             }
         }
     }
+};
+
+function search(term = '') {
+    return businesses.filter(business => business.description.toLowerCase().includes(term));
 }
 </script>
 
@@ -117,6 +124,7 @@ label{
     margin-bottom: 3px; 
 }
 
+
 .divContainer{
     margin: 0 35%;
     padding: 10px;
@@ -130,7 +138,7 @@ label{
     color: black;
     text-align: left;
     padding: 15px;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 25px;
     border-radius: 4px;
     background-color: #f1f1f1;
@@ -142,10 +150,18 @@ label{
     margin: 0 auto;
 }
 
-.button:hover{
-    background-color: #ddd;
-    color: black;
-    width: auto;
-    height: 50px; 
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+.button:hover{
+    background-color: #0e5811;
+}
+
 </style>

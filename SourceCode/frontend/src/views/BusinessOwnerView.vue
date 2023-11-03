@@ -28,9 +28,8 @@
             placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
             <label for="addInfo">Additional Info:</label><br>
             <input type="text" id="addInfo" name="addInfo"><br><br>
-            <input type="submit" value="Submit">
+            <input class="button" type="submit" value="Submit">
         </form>
-        <button><router-link to="/">Home</router-link></button>
     </div>
 </div>
 </template>
@@ -88,11 +87,18 @@ label{
     display: block;
     margin: 0 auto;
 }
+.button {
+    border-radius: 36px;
+    font-size: 30px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 .button:hover{
-    background-color: #ddd;
-    color: black;
-    width: auto;
-    height: 50px; 
+    background-color: #0e5811;
 }
 </style>

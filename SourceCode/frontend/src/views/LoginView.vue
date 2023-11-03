@@ -17,7 +17,7 @@
         <div>
             <br>
             <br>
-            <button class = "signupbutton"><router-link to="/signup">Sign up</router-link></button>
+            <button class = "signupbutton"><router-link to="/sign-up">Sign up</router-link></button>
         </div>
         </div>
   </template>
