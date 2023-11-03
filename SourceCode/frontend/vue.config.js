@@ -1,4 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
+const webpack = require('webpack');
+const fs = require('fs');
+
 module.exports = defineConfig({
   transpileDependencies: true
 })
@@ -10,18 +13,12 @@ module.exports = {
     historyApiFallback: true,
     allowedHosts: 'all',
   },
-}
-
-
-const webpack = require('webpack');
-const fs = require('fs');
-module.exports = {
   configureWebpack: config => {
     const commitHash = fs.readFileSync('commit-hash.txt').toString().trim();
 
     config.plugins.push(new webpack.DefinePlugin({
       'process.env.GIT_COMMIT': JSON.stringify(commitHash)
     }));
-  }
-};
+  },
+}
 
