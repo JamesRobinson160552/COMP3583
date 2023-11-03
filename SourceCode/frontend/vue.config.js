@@ -11,3 +11,16 @@ module.exports = {
     allowedHosts: 'all',
   },
 }
+
+const fs = require('fs');
+
+module.exports = {
+  configureWebpack: config => {
+    const commitHash = fs.readFileSync('commit-hash.txt').toString().trim();
+
+    config.plugins.push(new webpack.DefinePlugin({
+      'process.env.GIT_COMMIT': JSON.stringify(commitHash)
+    }));
+  }
+};
+
