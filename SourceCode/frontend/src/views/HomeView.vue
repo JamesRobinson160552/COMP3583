@@ -36,6 +36,7 @@ export default {
   data() {
     return {
       searchInput: '',
+      gitCommitHash: process.env.GIT_COMMIT || 'Unavailable' // Use environment variable or default to 'Unavailable'
     };
   },
   computed: {
@@ -45,11 +46,6 @@ export default {
   },
   mounted() {
     document.title = 'Business Hours Buddy'; // Set the title when the component is mounted
-  },
-  data() {
-    return {
-      gitCommitHash: process.env.GIT_COMMIT || 'Unavailable' // Use environment variable or default to 'Unavailable'
-    };
   }
 };
 </script>
