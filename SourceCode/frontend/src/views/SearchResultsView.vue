@@ -4,7 +4,7 @@
         <div v-for="result in searchresults" v-bind:key="result.id" class="search-result">
             <div :class="{ reliable: result.rating >= 4, okay: result.rating >= 3 && result.rating < 4, unreliable: result.rating < 3 }">
                 <h3> {{ result.name }} </h3>
-                <img v-bind:src="result.imagepath">
+                <img v-bind:src="result.imagepath" width="150">
                 <p> {{ result.opentime }} - {{ result.closetime }} </p>
                 <p>Reliability Rating: {{ result.rating }}</p>
                 <button class="details-button"><router-link :to="`/businessdetails/${result.id}`">Details</router-link></button>
