@@ -13,6 +13,11 @@
     
 **************************************************************************************/
 
+Zac Gonzales, Rafe Hambly, James Robinson, and Sean Rogowsky
+
+Github: https://github.com/JamesRobinson160552/COMP3583
+
+Hosted Live: https://hciproject.nogorogo.ca
 
 /**************************************************************************************
 
