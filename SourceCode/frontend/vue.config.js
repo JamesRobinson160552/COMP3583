@@ -12,8 +12,9 @@ module.exports = {
   },
 }
 
-const fs = require('fs');
 
+const webpack = require('webpack');
+const fs = require('fs');
 module.exports = {
   configureWebpack: config => {
     const commitHash = fs.readFileSync('commit-hash.txt').toString().trim();
