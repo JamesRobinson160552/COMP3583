@@ -27,6 +27,7 @@
       <div>
         <p>Current Git Commit: {{ gitCommitHash }}</p>
       </div>
+      <div><p><a href="https://forms.gle/8U7cjKwgr1KM4utU6">User Evaluation Form</a></p></div>
     </div>
   </div>
 </template>
